@@ -10,6 +10,8 @@ import Demo from './pages/Demo';
 import Examples from './pages/Examples';
 import Quiz from './pages/Quiz';
 import Contact from './pages/Contact';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -35,22 +37,31 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/concepts" element={<Concepts />} />
-            <Route path="/algorithms" element={<Algorithms />} />
-            <Route path="/training" element={<Training />} />
-            <Route path="/demo" element={<Demo />} />
-            <Route path="/examples" element={<Examples />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Auth Routes (without Navbar/Footer) */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+
+        {/* Main App Routes (with Navbar/Footer) */}
+        <Route path="/*" element={
+          <div className="min-h-screen flex flex-col">
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/concepts" element={<Concepts />} />
+                <Route path="/algorithms" element={<Algorithms />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/demo" element={<Demo />} />
+                <Route path="/examples" element={<Examples />} />
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        } />
+      </Routes>
     </Router>
   );
 }
