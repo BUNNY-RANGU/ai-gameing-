@@ -1,16 +1,67 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# AI Gaming Models
 
-Currently, two official plugins are available:
+Interactive React learning platform for AI concepts, algorithms, demos, quizzes, and game-style education.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![React](https://img.shields.io/badge/React-18-blue)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-ready-purple)](https://vite.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8)](https://tailwindcss.com/)
+[![Deploy](https://img.shields.io/badge/deploy-Vercel%20ready-black)](#deployment)
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Overview
 
-## Expanding the ESLint configuration
+AI Gaming Models is a Vite + React app that explains AI concepts through interactive pages, examples, demos, quizzes, and training-style flows.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+It is built for learners who want a more visual way to understand AI algorithms and model behavior.
+
+## Features
+
+- AI concepts and algorithm pages
+- Interactive examples and demos
+- Quiz and training sections
+- Login and signup UI pages
+- Animated UI with Framer Motion
+- Charts and visual explanations with Recharts
+
+## Tech Stack
+
+- React
+- Vite
+- React Router
+- Tailwind CSS
+- Framer Motion
+- Recharts
+- Lucide React
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Build:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+Deploy on Vercel as a Vite app.
+
+- Build command: `npm run build`
+- Output directory: `dist`
+
+## Author
+
+Built by [Rangu Suchandra](https://github.com/BUNNY-RANGU).
